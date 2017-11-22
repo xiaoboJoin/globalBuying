@@ -24,7 +24,6 @@ router.post('/login', function(req, res, next) {
         var appid = "wxc4614e1d785b49dd";
         var secret = "cbc6ef1b21b8a5703128ca38e68fe7ca";
         // https://api.weixin.qq.com/sns/jscode2session?appid=wx0075a4b06539973f&secret=c41892d77ea156492b70750c43cf3c68&js_code=061cBaYG19Pyl60hZrYG1vdfYG1cBaYi&grant_type=authorization_code
-
         var wxUrl = "https://api.weixin.qq.com/sns/jscode2session?appid=" + appid + "&secret=" + secret + "&js_code=" + options.code + "&grant_type=authorization_code"
         request(wxUrl, function(error, response, body) {
             if (!error && response.statusCode == 200) {
